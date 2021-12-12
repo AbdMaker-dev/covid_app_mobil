@@ -6,51 +6,54 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/struc_img"
+        android:id="@+id/rv_img"
         android:layout_width="67dp"
         android:layout_height="59dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/covid" />
+        tools:srcCompat="@drawable/coronavirus" />
 
     <TextView
-        android:id="@+id/struc_adresse"
+        android:id="@+id/rv_heur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
         android:fontFamily="@font/abeezee"
         android:text="FAN HOK"
         android:textColor="@color/design_default_color_error"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toEndOf="@+id/struc_nom"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toEndOf="@+id/rv_img"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/struc_contact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:id="@+id/rv_date"
+        android:layout_width="128dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="@font/abeezee"
         android:text="Tel: 778871387"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toEndOf="@+id/struc_img"
-        app:layout_constraintTop_toBottomOf="@+id/struc_nom" />
-
-    <TextView
-        android:id="@+id/struc_nom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/abeezee"
-        android:text="Hopital FAN"
-        android:textColor="@android:color/holo_blue_light"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toEndOf="@+id/struc_img"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toEndOf="@+id/rv_heur"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/rv_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/abeezee"
+        android:text="Rendez-vous"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/rv_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toEndOf="@+id/rv_img" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,18 +41,14 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View v) {
                 AuthService authService = new AuthService(LoginPage.this);
                 final int[] result = {0};
-                new Handler().postDelayed(new Runnable() {
-                    public void run() {
-                        result[0] = authService.login(log_username.getText().toString(), log_password.getText().toString());
-                    }
-                }, 1500);
+                result[0] = authService.login(log_username.getText().toString(), log_password.getText().toString());
                 new Handler().postDelayed(new Runnable() {
                     public void run() {
                         System.out.println(result[0]);
                         Intent intent = new Intent(LoginPage.this,Acceul.class);
                         startActivity(intent);
                     }
-                }, 1500);
+                }, 2500);
 
             }
         });

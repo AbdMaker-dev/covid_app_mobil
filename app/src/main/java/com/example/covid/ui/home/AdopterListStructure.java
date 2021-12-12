@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.covid.R;
@@ -41,12 +42,15 @@ public class AdopterListStructure extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(this.context).inflate(R.layout.item_list_structure, parent, false);
         TextView struc_nom, struc_contact, struc_adresse;
+        ImageView struc_img;
         struc_nom = convertView.findViewById(R.id.struc_nom);
         struc_contact = convertView.findViewById(R.id.struc_contact);
         struc_adresse = convertView.findViewById(R.id.struc_adresse);
+        struc_img = convertView.findViewById(R.id.struc_img);
+        struc_img.setImageResource(R.drawable.hospiss);
 
         struc_nom.setText(structures.get(position).nom);
-        struc_contact.setText(structures.get(position).contact);
+        struc_contact.setText("Tel: "+structures.get(position).contact);
         struc_adresse.setText(structures.get(position).adresse);
         return convertView;
     }
