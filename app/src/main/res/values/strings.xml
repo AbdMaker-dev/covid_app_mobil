@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">covid</string>
+    <string name="title_activity_acceul">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Rendez-vous</string>
+    <string name="title_notifications">Map</string>
+</resources>
