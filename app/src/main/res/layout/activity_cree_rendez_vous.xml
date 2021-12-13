@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreeRendezVous">
+
+    <TextView
+        android:id="@+id/nom_hospis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="Prendre rendez-vous a FAN"
+        android:textColor="#A81111"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="278dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="50dp"
+        android:hint="Date rdv ex: (yyy-dd-mm)"
+        app:boxStrokeColor="@color/design_default_color_error"
+        app:hintTextColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nom_hospis"
+        app:startIconDrawable="@drawable/calendar_24">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/date"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/heurLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="278dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="50dp"
+        android:hint="Heur du rendez-voud"
+        app:boxStrokeColor="@color/design_default_color_error"
+        app:hintTextColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateLayout"
+        app:startIconDrawable="@drawable/schedule_24">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/heur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_valid"
+        android:layout_width="206dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="50dp"
+        android:text="Valider"
+        app:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heurLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

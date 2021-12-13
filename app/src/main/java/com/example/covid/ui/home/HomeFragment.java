@@ -1,9 +1,11 @@
 package com.example.covid.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -20,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.covid.CreeRendezVous;
 import com.example.covid.R;
 import com.example.covid.databinding.FragmentHomeBinding;
 import com.example.covid.models.Structure;
@@ -71,6 +74,17 @@ public class HomeFragment extends Fragment {
                     }
                     AdopterListStructure listAdopter = new AdopterListStructure(getContext(), structures);
                     listStructures.setAdapter(listAdopter);
+                    listStructures.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Structure structure = (Structure) listAdopter.getItem(position);
+                            Intent intent = new Intent(getActivity(), CreeRendezVous.class);
+                            intent.putExtra("idStructure", structure.id);
+                            intent.putExtra("nomStructure", structure.nom);
+                            System.out.println(structure.id);
+                            startActivity(intent);
+                        }
+                    });
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

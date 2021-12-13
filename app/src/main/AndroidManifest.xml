@@ -12,9 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid"
         android:usesCleartextTraffic="true">
+        <activity android:name=".CreeRendezVous"></activity>
         <activity
             android:name=".Acceul"
-            android:label="@string/title_activity_acceul"></activity>
+            android:label="@string/title_activity_acceul" />
         <activity android:name=".Home" />
         <activity android:name=".SinIngPage" />
         <activity android:name=".LoginPage" />
